@@ -8,7 +8,6 @@ a{
 }
 
 kbd{
-    border:1px solid red;
     width: 4em;
     height: 4em;
     display: inline-block;
@@ -16,18 +15,43 @@ kbd{
     position: relative;
 }
 
+button{
+    background: #24292e;
+    border: none;
+    font-size: 14px;
+    color: whitesmoke;
+    padding: 0 3px;
+    border-radius:4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 kbd > button {
     position: absolute;
     right: 0;
     bottom: 0;
     display: none;
+    background-color:#1a1b1c;
+    transition: all 0.3s;
 }
 kbd:hover > button{
     display: inline-block;
+    animation: active 0.2s ease-in-out;
 }
+@keyframes active{
+    0%{
+      transform:scale(.8);
+    }
+    80%{
+      transform: scale(.9);
+    }
+    100%{
+      transform: scale(1.1);
+    }
+  }
 
 body{
-    background: grey url(./wall.jpg) no-repeat center center fixed;
+    background: grey url(./wall-paper.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
